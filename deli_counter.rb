@@ -5,19 +5,29 @@ def line(katz_deli)
 		customerWithNumber = ""
 		katz_deli.each_with_index do |value, index|
 			customerWithNumber << " " + (index + 1).to_s + ". " + value.to_s
-		end
+	
+	  end
 		puts "The line is currently:" + customerWithNumber
 	end
 end
 
-def take_a_number(katz_deli, name)
-	katz_deli << name 
-	puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
-end
+# def take_a_number(katz_deli, name)
+# 	katz_deli << name 
+# 	puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+# end
+
+ticketNumber = 0
+def take_a_number(katz_deli)
+  ticketNumber += l
+  katz_deli << ticketNumber
+  puts "Welcome You are number #{ticketNumber} in line."
+end  
+  
 
 def now_serving(katz_deli)
 	if katz_deli.empty?
-		puts "There is nobody waiting to be served!"
+		puts
+		"There is nobody waiting to be served!"
 	else 
 		current = katz_deli.shift 
 		puts "Currently serving #{current}."
